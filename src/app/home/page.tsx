@@ -9,9 +9,9 @@ import { createClient } from "@/lib/supabase/client";
 
 const HANDLE_STORAGE_KEY = "shie_hassaikai_handle_name";
 const SOUND_STORAGE_KEY = "shie_hassaikai_sound_enabled";
-const OPENCHAT_URL = "https://line.me/ti/g2/ここにオープンチャットのURLを貼り付け";
-const OFFICIAL_LINE_URL = "https://lin.ee/ここに公式LINEのURLを貼り付け";
-const GITHUB_URL = "https://github.com/ここにGitHubのユーザー名";
+const OPENCHAT_URL = "https://line.me/ti/g2/EbLsVD7-Scm_rQTUTPTc5a4MTRLHTxW60oQrkA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default";
+const OFFICIAL_LINE_URL = "https://lin.ee/pOqhDWX";
+const GITHUB_URL = "https://github.com/byakuya-121/ByakuyaTools.git";
 
 const navigation = [
   { label: "HOME", href: "#home" },
