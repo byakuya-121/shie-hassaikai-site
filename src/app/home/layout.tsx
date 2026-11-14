@@ -3,7 +3,13 @@ import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import { connection } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import type { Metadata, Viewport } from "next";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 async function AuthGuard({ children }: { children: React.ReactNode }) {
   await connection();
   const supabase = await createClient();
