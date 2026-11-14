@@ -3021,3 +3021,65 @@
   background: var(--theme-tint, rgba(217, 30, 42, 0.18));
   border-color: var(--crimson);
 }
+/* =========================================
+   /board スマホ表示（768px以下）レイアウト最適化
+   ========================================= */
+@media (max-width: 768px) {
+  /* チャット枠のPC用ドラッグサイズをスマホでは無効化して画面幅に合わせる */
+  .chat-room.chat-room-wide {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 78dvh !important;
+    min-height: 480px;
+  }
+
+  /* リサイズハンドル・サイズプリセットボタンはスマホでは隠す */
+  .chat-resize-edge-right,
+  .chat-resize-edge-bottom,
+  .chat-resize-corner,
+  .chat-size-controls {
+    display: none !important;
+  }
+
+  /* チャット上部ツールバーを縦積みに整理 */
+  .chat-top-intel-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .chat-top-online,
+  .chat-top-participants {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 2px;
+  }
+
+  /* チャットヘッダーの折り返し許可 */
+  .chat-header {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .chat-header-status-group {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* 吹き出しの最大幅をスマホ向けに広げる */
+  .chat-bubble {
+    max-width: 82vw;
+  }
+
+  /* 下部入力バーの余白調整 */
+  .chat-input-bar {
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .chat-tool-trigger-btn span:not(.chat-tool-emoji) {
+    display: none;
+  }
+}
