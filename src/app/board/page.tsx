@@ -180,7 +180,8 @@ export default function BoardPage() {
               className="settings-open-btn"
               onClick={() => setSettingsOpen(true)}
             >
-              ⚙ 設定 / PROFILE
+              ⚙ <span className="btn-label-desktop">設定 / PROFILE</span>
+              <span className="btn-label-mobile">設定</span>
             </button>
 
             <button
@@ -189,11 +190,17 @@ export default function BoardPage() {
               onClick={handleToggleSound}
             >
               <span className="sound-dot" />
-              SOUND: {soundEnabled ? "ON" : "OFF"}
+              <span className="btn-label-desktop">
+                SOUND: {soundEnabled ? "ON" : "OFF"}
+              </span>
+              <span className="btn-label-mobile">
+                {soundEnabled ? "音ON" : "音OFF"}
+              </span>
             </button>
 
             <Link href="/home" className="header-contact">
-              ← PORTAL HOME
+              <span className="btn-label-desktop">← PORTAL HOME</span>
+              <span className="btn-label-mobile">← TOP</span>
             </Link>
           </div>
         </div>
@@ -215,6 +222,7 @@ export default function BoardPage() {
                   className="board-aa-gif"
                 />
               </div>
+              <h1 className="mobile-board-title">COMMUNITY CHAT</h1>
             </div>
             <span className="section-heading-en">BULLETIN BOARD</span>
           </div>
