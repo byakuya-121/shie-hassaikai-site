@@ -1,0 +1,666 @@
+
+/* =========================================
+   SHIE HASSAIKAI
+   LUXURY MOTION SYSTEM
+========================================= */
+
+.luxury-welcome {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+
+.luxury-background-glow {
+  position: absolute;
+  z-index: -1;
+  width: 700px;
+  height: 700px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(135, 25, 37, .12),
+    transparent 68%
+  );
+  pointer-events: none;
+  animation: luxuryBackground 12s ease-in-out infinite alternate;
+}
+
+/* HEADER */
+
+.luxury-header {
+  animation: luxuryHeader 1.2s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.welcome-brand-logo {
+  width: 52px;
+  height: 54px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,.12));
+  transition:
+    filter .5s ease,
+    transform .5s ease;
+}
+
+.welcome-brand-logo:hover {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 12px rgba(255,255,255,.3));
+}
+
+.welcome-brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.welcome-brand-text strong {
+  color: #fff;
+  letter-spacing: .16em;
+}
+
+.welcome-brand-text small {
+  color: rgba(255,255,255,.55);
+  letter-spacing: .18em;
+  font-size: 9px;
+}
+
+/* MAIN PANEL */
+
+.luxury-container {
+  animation: luxuryPanel 1.4s cubic-bezier(.2,.7,.2,1) .15s both;
+}
+
+/* LEFT VISUAL */
+
+.luxury-visual {
+  position: relative;
+  overflow: hidden;
+}
+
+/* LIGHT EFFECT */
+
+.luxury-light {
+  position: absolute;
+  width: 250px;
+  height: 500px;
+  top: -30%;
+  left: -80%;
+  transform: rotate(25deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.035),
+    transparent
+  );
+  animation: luxuryLight 12s ease-in-out 2s infinite;
+  pointer-events: none;
+}
+
+/* EMBLEM */
+
+.luxury-crest-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: luxuryLogo 1.5s cubic-bezier(.2,.7,.2,1) .4s both;
+}
+
+.welcome-crest-image {
+  display: block;
+  width: min(280px, 70vw);
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0 8px rgba(255,255,255,.12))
+    drop-shadow(0 0 22px rgba(157,32,41,.12));
+  animation: hassaikaiEmblem 7s ease-in-out infinite;
+}
+
+/* ORBIT */
+
+.luxury-visual .welcome-orbit {
+  transform-origin: center;
+  animation: luxuryOrbit 70s linear infinite;
+}
+
+.luxury-visual .orbit-two {
+  animation-duration: 100s;
+  animation-direction: reverse;
+}
+
+/* TITLE */
+
+.luxury-title {
+  animation: luxuryTitle 1.2s ease-out .75s both;
+}
+
+.luxury-title h1 {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .3em;
+  animation: luxuryLetter 1.4s ease-out .9s both;
+}
+
+.luxury-title p {
+  color: rgba(255,255,255,.58);
+  letter-spacing: .35em;
+  animation: luxurySubtitle 1.3s ease-out 1.15s both;
+}
+
+/* VISUAL FOOTER */
+
+.luxury-visual .welcome-visual-bottom {
+  animation: luxuryBottom 1s ease-out 1.3s both;
+}
+
+/* LOGIN PANEL */
+
+.luxury-login {
+  animation: luxuryLogin 1.2s cubic-bezier(.2,.7,.2,1) .45s both;
+}
+
+/* LOGIN HEADING */
+
+.luxury-login .welcome-login-heading {
+  animation: luxuryElement .9s ease-out .7s both;
+}
+
+.luxury-login .welcome-login-heading h2 {
+  animation: luxuryHeading .8s ease-out .8s both;
+}
+
+/* TABS */
+
+.luxury-login .auth-tabs {
+  animation: luxuryElement .9s ease-out .95s both;
+}
+
+.luxury-login .auth-tabs button {
+  transition:
+    color .35s ease,
+    border-color .35s ease;
+}
+
+/* FORM */
+
+.luxury-login form {
+  animation: luxuryElement 1s ease-out 1.1s both;
+}
+
+.luxury-login form input {
+  transition:
+    border-color .4s ease,
+    background .4s ease,
+    box-shadow .4s ease,
+    transform .4s ease;
+}
+
+.luxury-login form input:focus {
+  border-color: #a82a34;
+  background: #211719;
+  box-shadow: 0 0 18px rgba(157,32,41,.13);
+  transform: translateY(-1px);
+}
+
+/* SUBMIT BUTTON */
+
+.luxury-login .welcome-submit {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background .4s ease,
+    box-shadow .4s ease,
+    transform .4s ease;
+}
+
+.luxury-login .welcome-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(255,255,255,.17),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left .8s ease;
+}
+
+.luxury-login .welcome-submit:hover::before {
+  left: 150%;
+}
+
+.luxury-login .welcome-submit:hover:not(:disabled) {
+  background: #ad2733;
+  box-shadow: 0 8px 28px rgba(157,32,41,.2);
+  transform: translateY(-2px);
+}
+
+.luxury-login .welcome-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* SECURITY */
+
+.luxury-login .welcome-security {
+  animation: luxuryElement .9s ease-out 1.35s both;
+}
+
+.luxury-login .welcome-notice {
+  animation: luxuryElement .9s ease-out 1.5s both;
+}
+
+.luxury-login .status-dot {
+  animation: luxuryStatus 3s ease-in-out infinite;
+}
+
+/* FOOTER */
+
+.luxury-footer {
+  animation: luxuryBottom 1s ease-out 1.5s both;
+}
+
+/* =========================================
+   KEYFRAMES
+========================================= */
+
+@keyframes luxuryBackground {
+  from {
+    opacity: .55;
+    scale: .92;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1.08;
+  }
+}
+
+@keyframes luxuryHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luxuryPanel {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+    filter: blur(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes luxuryLogo {
+  from {
+    opacity: 0;
+    transform: scale(.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes luxuryLogoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(157,32,41,.08));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 13px rgba(157,32,41,.28));
+  }
+}
+
+@keyframes luxuryOrbit {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes luxuryTitle {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luxuryLetter {
+  from {
+    opacity: 0;
+    letter-spacing: 15px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 7px;
+  }
+}
+
+@keyframes luxurySubtitle {
+  from {
+    opacity: 0;
+    letter-spacing: 8px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 4px;
+  }
+}
+
+@keyframes luxuryBottom {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luxuryLogin {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes luxuryElement {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes luxuryHeading {
+  from {
+    opacity: 0;
+    letter-spacing: 8px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 4px;
+  }
+}
+
+@keyframes luxuryLight {
+  0%, 15% {
+    left: -80%;
+  }
+
+  65%, 100% {
+    left: 150%;
+  }
+}
+
+@keyframes luxuryStatus {
+  0%, 100% {
+    opacity: .55;
+    box-shadow: 0 0 3px rgba(157,32,41,.3);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 11px rgba(194,44,56,.8);
+  }
+}
+
+/* OFFICIAL EMBLEM ANIMATION */
+
+@keyframes hassaikaiEmblem {
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 7px rgba(255,255,255,.10))
+      drop-shadow(0 0 16px rgba(157,32,41,.10));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 12px rgba(255,255,255,.20))
+      drop-shadow(0 0 28px rgba(157,32,41,.25));
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 760px) {
+  .luxury-background-glow {
+    width: 400px;
+    height: 400px;
+  }
+
+  .luxury-visual .welcome-orbit {
+    animation-duration: 90s;
+  }
+
+  .welcome-brand-logo {
+    width: 42px;
+    height: 44px;
+  }
+
+  .welcome-crest-image {
+    width: min(220px, 65vw);
+  }
+
+  .luxury-title h1 {
+    letter-spacing: .18em;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .luxury-welcome *,
+  .luxury-welcome *::before,
+  .luxury-welcome *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .luxury-light {
+    display: none;
+  }
+
+  .welcome-crest-image {
+    animation: none !important;
+  }
+}
+
+/* 管理者ログインボタン */
+.admin-login-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 17px;
+  color: #d6a0a4;
+  background: rgba(110, 20, 30, 0.12);
+  border: 1px solid rgba(170, 55, 65, 0.45);
+  border-radius: 5px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-login-link:hover {
+  color: #fff;
+  background: rgba(130, 25, 38, 0.35);
+  border-color: #a83b47;
+  box-shadow: 0 0 18px rgba(150, 35, 45, 0.2);
+  transform: translateY(-1px);
+}
+
+/* 管理者認証モード */
+.admin-mode-label {
+  margin: 22px 0;
+  padding: 12px;
+  color: #d6a0a4;
+  background: rgba(110, 20, 30, 0.12);
+  border: 1px solid rgba(170, 55, 65, 0.35);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+
+.admin-mode-label span {
+  margin-right: 8px;
+  color: #b84955;
+}
+
+/* 管理者ログインボタン */
+.admin-submit {
+  background: linear-gradient(110deg, #64141e, #9c2634) !important;
+}
+
+.admin-submit:hover {
+  box-shadow: 0 0 24px rgba(160, 35, 50, 0.3);
+}
+
+/* 通常ログインに戻る */
+.back-to-login {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px;
+  color: #aaa;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.back-to-login:hover {
+  color: #fff;
+}
+
+/* 管理者ダッシュボード */
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 48px;
+  color: #eee;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(120, 20, 35, 0.16),
+      transparent 35%
+    ),
+    #080808;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(170, 55, 65, 0.35);
+}
+
+.admin-header p,
+.admin-eyebrow {
+  color: #a84954;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+.admin-header h1 {
+  margin-top: 8px;
+  font-size: 28px;
+}
+
+.admin-status {
+  padding: 9px 14px;
+  color: #d6a0a4;
+  border: 1px solid rgba(170, 55, 65, 0.5);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+.admin-content {
+  max-width: 760px;
+  margin: 90px auto;
+  padding: 36px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(170, 55, 65, 0.25);
+}
+
+.admin-content h2 {
+  margin: 18px 0;
+  font-size: 24px;
+}
+
+.admin-content p:last-child {
+  color: #aaa;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .welcome-header {
+    gap: 12px;
+  }
+
+  .admin-login-link {
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+
+  .admin-dashboard {
+    padding: 24px 16px;
+  }
+
+  .admin-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-content {
+    margin-top: 48px;
+    padding: 24px;
+  }
+}
