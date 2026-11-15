@@ -773,7 +773,7 @@ export default function Home() {
               <p className="section-label">
                 <ScrambleText text="02 — ORGANIZATION" delay={50} speed={24} />
               </p>
-              <h2 className="heading-flash">組織概要</h2>
+              <h2 className="heading-flash">組織概要🗽</h2>
             </div>
             <span className="section-heading-en">
               <ScrambleText text="ABOUT US" delay={150} speed={28} />
