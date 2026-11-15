@@ -295,7 +295,7 @@ export default function Home() {
       if (profileError) {
         setNameFeedback({
           type: "err",
-          text: "ユーザー名の保存に失敗しました。再度お試しください。",
+          text: "ユーザー名の保存に失敗しました。再度お試しください。⚠️",
         });
         setSavingName(false);
         return;
@@ -512,7 +512,7 @@ export default function Home() {
           <form className="settings-section-box" onSubmit={handleUpdateUsername}>
             <div className="settings-section-title">
               <span>01 // USER NAME</span>
-              <small>表示名の変更</small>
+              <small>表示名の変更🧩</small>
             </div>
             <p className="settings-section-desc">
               掲示板・チャット・オンライン一覧に表示されるオペレーター名を変更します。
@@ -656,9 +656,13 @@ export default function Home() {
           </div>
 
           <p className="hero-description hero-anim-desc">
-            電脳の深淵を見極め、秩序と境界を書き換える。
+            OpenChatを通じて荒らし界隈の大規模組織へようこそ。<br />
+            本組織は、荒らし・トロール行為🔪・LineJSツール開発・乗っ取りなどの依頼を請け負っております。<br />
+            日本国内での荒らし界隈組織です。<br />
+            公式LINEや掲示板を通じて、情報収集やメンバー👾コミュニティ活動を行っています。<br />
+            
             <br />
-            死穢八斎會による調査・技術・記録の中枢ポータル。
+          　組織の理念や活動内容については、以下のボタンからご確認ください。
           </p>
 
           <div className="hero-actions hero-anim-actions">
@@ -667,7 +671,7 @@ export default function Home() {
               <span className="button-arrow">↗</span>
             </a>
             <a href="#activities" className="button button-ghost">
-              <span>作戦・活動領域</span>
+              <span>活動領域</span>
               <span className="button-arrow">→</span>
             </a>
             <a
