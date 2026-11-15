@@ -658,8 +658,7 @@ export default function Home() {
           <p className="hero-description hero-anim-desc">
             OpenChatを通じて荒らし界隈の大規模組織へようこそ。<br />
             本組織は、荒らし・トロール行為🔪・LineJSツール開発・乗っ取りなどの依頼を請け負っております。<br />
-            日本国内での荒らし界隈組織です。<br />
-            公式LINEや掲示板を通じて、情報収集やメンバー👾コミュニティ活動を行っています。<br />
+           <br />
             
             <br />
           　組織の理念や活動内容については、以下のボタンからご確認ください。
@@ -794,10 +793,8 @@ export default function Home() {
               <div className="red-rule" />
 
               <p className="about-description reveal-body">
-                死穢八斎會は、情報収集・技術研究・資料整理などの
-                活動を記録し、紹介する組織です。
-                公開情報を適切に取り扱い、技術的な知識を深め、
-                調査結果を整理・共有することを目指しています。
+              日本国内での荒らし界隈組織です。
+              公式LINEや掲示板を通じて、情報収集やメンバー👾コミュニティ活動を行っています。
               </p>
             </div>
 
