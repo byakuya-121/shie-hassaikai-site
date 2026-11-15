@@ -79,7 +79,7 @@ export default function LoginForm() {
 
       if (error) {
         setErrorMessage(
-          "登録できませんでした。入力内容を確認してください。"
+          "登録できませんでした。入力内容を確認してください。⚠️"
         );
         setLoading(false);
         return;
@@ -92,14 +92,14 @@ export default function LoginForm() {
       }
 
       setSuccessMessage(
-        "登録を受け付けました。確認メールのリンクから認証を完了してください。"
+        "登録を受け付けました。確認メールのリンクから認証を完了してください。⚠️"
       );
 
       setPassword("");
       setLoading(false);
     } catch {
       setErrorMessage(
-        "通信中にエラーが発生しました。時間をおいて再度お試しください。"
+        "通信中にエラーが発生しました。時間をおいて再度お試しください "
       );
       setLoading(false);
     }
@@ -155,7 +155,7 @@ export default function LoginForm() {
             {mode === "admin" ? "通常ログインへ戻る" : "⚙ 管理者権限ログイン"}
           </button>
 
-          <span className="welcome-version">MEMBER PORTAL / 2026</span>
+          <span className="welcome-version">MEMBER PORTAL / 2026 </span>
         </div>
       </header>
 
